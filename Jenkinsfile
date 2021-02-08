@@ -22,6 +22,7 @@ pipeline {
         stage('Deploy')     { 
             steps       { 
                 echo ' Deploy started'
+                sh 'docker run -it --name web1 -p 8083:80 myimg'
                  
                         }
                             }
