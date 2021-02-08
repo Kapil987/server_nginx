@@ -15,7 +15,7 @@ pipeline {
                             }//stage build closed
         stage('Test')       { 
             steps       { 
-                echo ' Test started'
+                echo ' Test started '
                 
                         }
                             }//stage test closed
