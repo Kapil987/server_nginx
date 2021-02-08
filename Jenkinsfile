@@ -5,7 +5,7 @@ pipeline {
 	    steps           { 
             sh 'pwd'
             sh 'ls -l' 
-            sh 'docker build -t myimg .' 
+            sh 'docker.build("myimg")'
                         }
                             }//stage build closed
         stage('Test')       { 
