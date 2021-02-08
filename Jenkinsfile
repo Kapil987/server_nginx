@@ -5,10 +5,10 @@ pipeline {
 	    steps           { 
             sh 'pwd'
             sh 'ls -l' 
-            script {
-            app = docker.build("kapil0123/myimg")
+            // script {
+            docker.build("myimg")
             // app = docker.build("getintodevops/hellonode")
-                    }    
+                    // }    
                         }
                             }//stage build closed
         stage('Test')       { 
