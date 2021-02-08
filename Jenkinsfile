@@ -4,7 +4,7 @@ pipeline {
         stage('Build')      { 
 	    steps           { 
             sh 'pwd'
-            sh 'docker --version'  
+            sh '/usr/bin/docker --version'  
                         }
                             }//stage build closed
         stage('Test')       { 
