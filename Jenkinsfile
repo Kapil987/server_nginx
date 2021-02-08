@@ -21,7 +21,7 @@ pipeline {
                             }//stage test closed
         stage('Deploy')     { 
             steps       { 
-                echo ' Deploy started'
+                echo ' Deploy started '
                 sh 'docker run -it --name web1 -p 8083:80 myimg'
                  
                         }
