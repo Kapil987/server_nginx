@@ -4,7 +4,8 @@ pipeline {
         stage('Build')      { 
 	    steps           { 
             sh 'pwd'
-            sh '/usr/bin/docker --version'  
+            sh 'ls -l' 
+            sh 'docker build -t myimg .' 
                         }
                             }//stage build closed
         stage('Test')       { 
