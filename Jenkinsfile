@@ -5,7 +5,8 @@ pipeline {
 	    steps           { 
             sh 'pwd'
             sh 'ls -l' 
-            sh 'docker.build("myimg")'
+            docker.build("myimg")
+            // app = docker.build("getintodevops/hellonode")
                         }
                             }//stage build closed
         stage('Test')       { 
