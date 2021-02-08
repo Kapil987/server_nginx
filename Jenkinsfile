@@ -6,7 +6,7 @@ pipeline {
             sh 'pwd'
             sh 'ls -l' 
             script {
-	    docker --version
+	    sh 'docker --version'
             //docker.build("myimg")
             // app = docker.build("getintodevops/hellonode")
                     }    
