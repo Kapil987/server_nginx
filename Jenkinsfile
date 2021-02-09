@@ -1,11 +1,14 @@
 pipeline {
     agent { label 'docker_slave' } 
-        docker { image 'myimg' }
+        
     }
     stages {
-        stage('Test') {
+        stage('Back-End') {
+
+            docker { image 'myimg' }
             steps {
                 sh 'docker --version'
+                sh 'docker images'
             }
         }
     }
