@@ -8,7 +8,7 @@ pipeline {
                 docker {
                     label 'docker_slave' 
                     image 'myimg' 
-                    arg '-p 8083:80'
+                    args '-p 8083:80'
                     }
                 }
             steps {
