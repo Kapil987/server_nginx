@@ -5,6 +5,7 @@ pipeline {
         stage('Back-End')   {
             agent   {
                 docker  {
+                sh 'docker --version'
                 label 'docker_slave'
                 image 'myimg'
                 args '-p 8083:80'
