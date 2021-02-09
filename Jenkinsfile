@@ -3,9 +3,8 @@ pipeline {
         
     stages {
         stage('Back-End') {
-
-            docker { image 'myimg' }
             steps {
+            docker { image 'myimg' }
                 sh 'docker --version'
                 sh 'docker images'
             }
