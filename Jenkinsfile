@@ -3,7 +3,7 @@ pipeline {
         
     stages {
         stage('Back-End')   {
-            testbed = docker.image('${myimg}')
+            
             // agent   {
             //     docker  {
             //     // sh 'docker --version'
@@ -15,6 +15,7 @@ pipeline {
             
             steps   {
             // image 'maven:3-alpine
+                testbed = docker.image('${myimg}')
                 sh 'docker --version'
                 sh 'docker images'
                     }
