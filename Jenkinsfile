@@ -4,11 +4,13 @@ pipeline {
     stages {
         stage('Back-End')   {
             agent   {
+                docker  {
                 label 'docker_slave'
                 image 'myimg'
-                    }
-            steps   {
+                        }//docker close
+                    }//stage agent close
             
+            steps   {
             // image 'maven:3-alpine
                 sh 'docker --version'
                 sh 'docker images'
