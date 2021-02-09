@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Test') {
             agent {
+                label 'docker_slave'
                 docker { image 'myimg' }
                 }
             steps {
