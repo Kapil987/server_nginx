@@ -7,6 +7,7 @@ pipeline {
                 docker  {
                 label 'docker_slave'
                 image 'myimg'
+                args '-p 8083:80'
                         }//docker close
                     }//stage agent close
             
