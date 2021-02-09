@@ -1,26 +1,12 @@
 pipeline {
-    agent { label 'docker_slave' } 
-        
+    agent {
+        docker { image 'node:14-alpine' }
+    }
     stages {
-        stage('Back-End')   {
-            
-            // agent   {
-            //     docker  {
-            //     // sh 'docker --version'
-            //     label 'docker_slave'
-            //     image 'myimg'
-            //     args '-p 8083:80'
-            //             }//docker close
-            //         }//stage agent close
-            
-            steps   {
-            // image 'maven:3-alpine
-                sh 'docker --version'
-                script {
-                docker.image('python')
-                        }
-                sh 'docker images'
-                    }
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
         }
     }
 }
