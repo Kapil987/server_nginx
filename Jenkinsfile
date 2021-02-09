@@ -4,8 +4,10 @@ pipeline {
     stages {
         stage('Test') {
             agent {
-                label 'docker_slave'
-                docker { image 'myimg' }
+                
+                docker {
+                    label 'docker_slave' 
+                    image 'myimg' }
                 }
             steps {
                 sh 'docker --version'
