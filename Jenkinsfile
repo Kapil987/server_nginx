@@ -7,7 +7,9 @@ pipeline {
                 
                 docker {
                     label 'docker_slave' 
-                    image 'myimg' }
+                    image 'myimg' 
+                    arg '-p 8083:80'
+                    }
                 }
             steps {
                 sh 'docker --version'
