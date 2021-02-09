@@ -16,7 +16,9 @@ pipeline {
             steps   {
             // image 'maven:3-alpine
                 sh 'docker --version'
+                script {
                 docker.image('myimg')
+                        }
                 sh 'docker images'
                     }
         }
