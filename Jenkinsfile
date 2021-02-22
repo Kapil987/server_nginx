@@ -6,7 +6,7 @@ pipeline {
             agent {
                 
                 docker {
-                    label 'docker_slave' 
+                    label 'docker_slave' // if label is not specified here it will go to jenkins master
                     image 'myimg' 
                     args '-p 8083:80'
                     }
